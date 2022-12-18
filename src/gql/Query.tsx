@@ -6,7 +6,7 @@ export const RICK_MORTY = gql`
             info {
                 count
             }
-            results{
+            results (page: 2, perPage: 20){
                 name
                 image
                 status
