@@ -1,12 +1,12 @@
 import { gql } from "@apollo/client";
 
 export const RICK_MORTY = gql`
-    query {
-        characters(page: 2) {
+    query Characters($page: Int!){
+        characters(page: $page){
             info {
                 count
             }
-            results {
+            results{
                 name
                 image
                 status

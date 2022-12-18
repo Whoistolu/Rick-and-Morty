@@ -3,8 +3,8 @@ import { useQuery } from '@apollo/client';
 import { RICK_MORTY } from "./gql/Query";
 
 function App() {
-  const { loading, error, data } = useQuery(RICK_MORTY);
-
+  const { loading, error, data, refetch } = useQuery(RICK_MORTY);
+    variables: { page: 1 }
   if (!data) return <p>Loading...</p>
   // console.log(data)
   return (
