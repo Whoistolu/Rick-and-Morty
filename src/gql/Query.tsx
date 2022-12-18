@@ -1,8 +1,8 @@
 import { gql } from "@apollo/client";
 
 export const RICK_MORTY = gql`
-    query Characters($page: Int!){
-        characters(page: $page){
+    query {
+        characters {
             info {
                 count
             }
